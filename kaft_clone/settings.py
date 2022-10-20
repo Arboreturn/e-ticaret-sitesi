@@ -62,7 +62,8 @@ ROOT_URLCONF = 'kaft_clone.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -131,3 +132,7 @@ STATIC_URL = '/static/'
 # Page
 # Product
 # Cart
+
+# for the create an application:
+#  python manage.py startapp appname
+
