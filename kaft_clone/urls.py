@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from page.views import index # verdiğimiz urli ilgili yerden çağırmamız gerekir
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',index,name="index"),
 ]
