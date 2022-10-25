@@ -127,13 +127,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 
-STATIC_URL = '/s/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 #    '/var/www/static/', daha fazla static file eklemek için kullanılır
 ]
 
-MEDIA_URL = '/media/'  
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media' ) 
 # Apss:
 # Page
 # Product
