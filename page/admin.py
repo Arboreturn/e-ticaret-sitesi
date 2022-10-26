@@ -9,7 +9,6 @@ class PageModify(admin.ModelAdmin):
     list_editable = ("title","status")
 
 admin.site.register(Page,PageModify)
-    
 
 # Django Structure
 #-----------------

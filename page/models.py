@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-
+DEFAULT_STATUS = "draft"
 STATUS = [
     # sol kısım DBye yazilack
     # sağ kisim human a gozukecek
@@ -21,7 +21,7 @@ class Page(models.Model):
     # updated_at  # -- her değiştiği zaman
     title =(models.CharField(max_length=200))
     slug = models.SlugField(max_length=200,
-                            default="",)
+                            default=DEFAULT_STATUS)
     content = models.TextField()
     cover_image= models.ImageField(upload_to='page',null = True,blank = True) # uplaod_to = hangi klasöre gönderilsin alanı
     status = models.CharField(
@@ -34,3 +34,12 @@ class Page(models.Model):
     updated_at = models.DateTimeField(auto_now_add= True)
     
 
+class Carousel(models.Model):
+    title =models.CharField(max_length=200,null=True,blank=True)
+    cover_image= models.ImageField(upload_to='carousel',null = True,blank = True) # uplaod_to = hangi klasöre gönderilsin alanı
+    status=models.CharField(default=DEFAULT_STATUS,choices=STATUS,max_length=10)
+    #status
+    created_at=models.DateTimeField(auto_now_add= True)
+    updated_at=models.DateTimeField(auto_now_add= True)
+    
+    
