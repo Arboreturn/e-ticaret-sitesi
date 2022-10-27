@@ -25,21 +25,28 @@ class Page(models.Model):
     content = models.TextField()
     cover_image= models.ImageField(upload_to='page',null = True,blank = True) # uplaod_to = hangi klasöre gönderilsin alanı
     status = models.CharField(
-        default ="draft",
+        default =DEFAULT_STATUS,
         choices =STATUS,
         max_length=10,
         
     )
-    created_at = models.DateTimeField(auto_now_add= True)
+    createt_at = models.DateTimeField(auto_now_add= True)
     updated_at = models.DateTimeField(auto_now_add= True)
     
 
+
 class Carousel(models.Model):
     title =models.CharField(max_length=200,null=True,blank=True)
-    cover_image= models.ImageField(upload_to='carousel',null = True,blank = True) # uplaod_to = hangi klasöre gönderilsin alanı
-    status=models.CharField(default=DEFAULT_STATUS,choices=STATUS,max_length=10)
-    #status
-    created_at=models.DateTimeField(auto_now_add= True)
-    updated_at=models.DateTimeField(auto_now_add= True)
-    
-    
+    cover_image=models.ImageField(
+        upload_to='carousel',
+        null= True,
+        blank=True
+    )
+    status = models.CharField(
+        default =DEFAULT_STATUS,
+        choices =STATUS,
+        max_length=10,
+        
+    )
+    createt_at = models.DateTimeField(auto_now_add= True)
+    updated_at = models.DateTimeField(auto_now_add= True)

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Page
+from .models import Page,Carousel
 # Register your models here.
     
 class PageModify(admin.ModelAdmin):
@@ -9,6 +9,7 @@ class PageModify(admin.ModelAdmin):
     list_editable = ("title","status")
 
 admin.site.register(Page,PageModify)
+admin.site.register(Carousel)
 
 # Django Structure
 #-----------------
