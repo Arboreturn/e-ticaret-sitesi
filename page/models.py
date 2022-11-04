@@ -35,7 +35,8 @@ class Page(models.Model):
     
 
 
-class Carousel(models.Model):
+# carousel alanı model    
+class Carousel(models.Model): 
     title =models.CharField(max_length=200,null=True,blank=True)
     cover_image=models.ImageField(
         upload_to='carousel',
