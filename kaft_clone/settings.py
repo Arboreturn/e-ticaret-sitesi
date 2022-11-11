@@ -134,7 +134,7 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media' ) 
+MEDIA_ROOT = os.path.join(BASE_DIR,'media' )
 # Apss:
 # Page
 # Product
@@ -143,3 +143,19 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media' )
 # for the create an application:
 #  python manage.py startapp appname
 
+'''
+yonetici :
+- carousel
+- product
+- page 
+- category
+- order
+
+kullanici:
+- kullanici kaydi
+- adres kaydi
+- kredi karti işlemi / iyzico --> SUCCESS - ERROR -> 100, 1 price check
+- sipariş takibi
+
+cart --> items
+'''
