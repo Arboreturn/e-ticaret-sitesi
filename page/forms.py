@@ -5,11 +5,10 @@ from .models import Carousel
 class CarouselFormModel(ModelForm): # forms come from model form
     class Meta:
         model = Carousel
-        fields = '__all__' # Dont use this
+        fields = '__all__' # Don't use this
         fields = [
             'title',
             'cover_image',
-            
         ]
     
     

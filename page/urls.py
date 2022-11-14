@@ -1,6 +1,14 @@
 from django.urls import path
-from .page import views
+from .views import (
+    carousel_create,
+    carousel_list,
+    carousel_update,                   
+)
+
 
 urlpatterns = [
-    path('manage/carousel_create',carousel_create),
+    path('manage/carousel_list/',carousel_list,name="carousel_list"),
+    path('manage/carousel_create/',carousel_create,name="carousel_create"),
+    
 ]
+
