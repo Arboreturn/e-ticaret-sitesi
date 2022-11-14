@@ -20,3 +20,13 @@ admin.site.register(Carousel)
 # F Forms
 # Messages
 # S Session
+
+class CarouselAdmin(admin.ModelAdmin):
+    list_display=[
+        'pk',
+        'title',
+        'cover_image',
+        'status',
+    ]
+    list_filter=['status', ]
+    list_editable=list_filter
