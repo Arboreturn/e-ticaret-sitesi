@@ -3,6 +3,11 @@ ders 7 kayıt arızasından dolayı html dosyasını hazır çektik
 - sorunlar
 
 web ana sayfası gelmiyor
-verdiğim urller verdiğim adrese gelmiyor ve hiç bir yere gelmiyor
+verdiğim urller verdiğim adrese gelmiyor ve hiç bir yere gelmiyor - halledildi
    - carousel create
    -carousel-list 
+
+yeni sorunlar:
+    - carousel edit bölümü gelmiyor
+    web ana sayfa gelmiyor
+    - carousel ana pngler gelmiyor

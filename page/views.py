@@ -24,7 +24,8 @@ def carousel_update(request,pk):
     context=dict()
     # kaft_clone.com/manage/carousel/1/edit
     item = Carousel.objects.get(pk=pk)
-    return render(request,'manage/carousel_update.html',context)
+    context['item']= Carousel.objects.get(pk=pk)
+    return render(request,'manage/carousel_form.html',context)
     
 
 # stuff not checked
@@ -42,5 +43,5 @@ def carousel_create(request):
         if form.is_valid(): 
             form.save()
         messages.success(request,'Birseyler eklendi ama bilemiyorum')
-        return render(request,'manage/carousel_create.html',context)
+        return render(request,'manage/carousel_form.html',context)
         

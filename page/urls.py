@@ -7,8 +7,8 @@ from .views import (
 
 
 urlpatterns = [
-    path('manage/carousel_list/',carousel_list,name="carousel_list"),
-    path('manage/carousel_create/',carousel_create,name="carousel_create"),
-    
+    path('carousel_list/',carousel_list,name="carousel_list"),
+    path('carousel_create/',carousel_create,name="carousel_create"),
+    path('carousel_update/<int:pk>/',carousel_update,name="carousel_update"),
 ]
 
