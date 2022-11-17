@@ -2,22 +2,20 @@
 
 {% block content %}
 {% include 'home/carousel.html' %}
+
 <!-- MultiCursor ozelligini kesinlikle ogrenin -->
+
 
 <div class="container mt-5">
     <div class="row">
+        {% for item in products %}
         <div class="col-sm-3">
-            {% include 'product/product.html '%}
+            {% include 'product/product.html' %}
         </div>
-        <div class="col-sm-3">
-            {% include 'product/product.html '%}
-        </div>
-        <div class="col-sm-3">
-            {% include 'product/product.html '%}
-        </div>
-        <div class="col-sm-3">
-            {% include 'product/product.html '%}
-        </div>
+        {% endfor %}
+        
     </div>
 </div>
-    {% endblock content %}
+
+{% endblock %}
+

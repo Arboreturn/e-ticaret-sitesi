@@ -1,0 +1,5 @@
+-
+page update kisminda status ve slug hatali ve silindi kismi islemiyor
+
+-- ders eksikleri
+    -

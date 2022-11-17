@@ -1,22 +1,42 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import (
+    render, 
+    redirect, 
+    get_object_or_404,  # object i getirir veya 404 hatasi verir
+)
 from django.contrib import messages
 from django.utils.text import slugify
-from .models import Carousel,Page
-from .forms import CarouselFormModel,PageModelForm
+from .models import Carousel, Page
+from .forms import CarouselModelForm, PageModelForm
 from django.contrib.admin.views.decorators import staff_member_required
+from product.models import Category, Product
 # Create your views here.
+STATUS = "published"
 
 # User:
 def index(request):
-    context=dict()
+    context = dict()
     context['images'] = Carousel.objects.filter(
-        status="published"
-        # we must saying there is cover image
-        ) # we filtered the unofficial ones
-    return render(request,'home/index.html', context)
+        status=STATUS,
+    ).exclude(cover_image='')
+
+    products = Product.objects.filter(
+        is_home=True,
+        status=STATUS,
+    )
+    context['products'] = products
+    # if not request.session.session_key:
+        # request.session.save()
+
+    return render(request, 'home/index.html', context)
 
 
-#
+def page_show(request, slug):
+    context = dict()
+    context['page'] = get_object_or_404(Page, slug=slug)
+    return render(request, 'page/page.html', context)
+
+
+
 def manage_list(request):
     context=dict()
     return render(request,'manage/manage.html',context)

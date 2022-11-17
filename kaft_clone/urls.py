@@ -18,9 +18,12 @@ from django.urls import path,include
 from page.views import index # verdiğimiz urli ilgili yerden çağırmamız gerekir
 from django.conf import settings
 from django.conf.urls.static import static
+from page.views import İndex
+from product.views import category_show
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index,name="index"),
+    path('<slug:category_slug>',category_show,name="category_show"),
     path('manage/', include('page.urls'),), 
 ]
 if settings.DEBUG:
