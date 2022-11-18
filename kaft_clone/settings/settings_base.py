@@ -149,6 +149,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media' )
 #  python manage.py startapp appname
 
 '''
+TODO List:
+
 yonetici :
 - carousel
 - product

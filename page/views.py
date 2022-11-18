@@ -6,7 +6,7 @@ from django.shortcuts import (
 from django.contrib import messages
 from django.utils.text import slugify
 from .models import Carousel, Page
-from .forms import CarouselModelForm, PageModelForm
+from .forms import CarouselFormModel, PageModelForm
 from django.contrib.admin.views.decorators import staff_member_required
 from product.models import Category, Product
 # Create your views here.

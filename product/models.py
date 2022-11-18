@@ -1,7 +1,7 @@
 from django.db import models
 from page.models import DEFAULT_STATUS, STATUS
 GENDER_CHOICE = [
-    ('men', 'Erkek'),
+    ('men', 'Erkek'), # soldakiler database sağdakiler ekrana
     ('women', 'Kadin'),
     ('unisex', 'UniSex'),
 ]
