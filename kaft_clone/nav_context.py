@@ -9,8 +9,8 @@ def nav_data(request):
         status=STATUS
     ).order_by('title')
     
-    context['pages'] = Page.objects.filter(
-        status=STATUS
-    ).order_by('title')
+    # context['pages'] = Page.objects.filter(
+    #     status=STATUS
+    # ).order_by('title')
     
     return context

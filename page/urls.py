@@ -4,6 +4,7 @@ from .views import (
     manage_list,
     
     # Page:
+    page_show,
     page_list,
     page_create,
     page_update,
@@ -29,5 +30,6 @@ urlpatterns = [
     path('page/create/',page_create,name="page_create"),
     path('page_update/<int:pk>/',page_update,name="page_update"),
     path('page_delete/<int:pk>/',page_delete,name="page_delete"),
+    path('page/<slug:slug>/',page_show,name="page_show"),
 ]
 
